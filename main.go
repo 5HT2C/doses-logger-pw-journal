@@ -7,6 +7,8 @@ import (
 	"io"
 	"net/http"
 	"os"
+
+	"github.com/5HT2C/doses-logger-pw-journal/types"
 )
 
 var (
@@ -17,24 +19,24 @@ var (
 func main() {
 	flag.Parse()
 
-	var doses []Dose
+	var doses []types.Dose
 	if err := getJsonFromUrl(&doses, *loadUrl); err != nil {
 		panic(err)
 	}
 
-	var j Journal
+	var j types.Journal
 	if len(*fp) > 0 {
 		if b, err := os.ReadFile(*fp); err != nil {
 			panic(err)
 		} else {
 
 			if err := json.Unmarshal(b, &j); err != nil {
-				j = Journal{}
+				j = types.Journal{}
 			}
 		}
 	}
 
-	d := Doses(doses)
+	d := types.Doses(doses)
 	j.Experiences = append(j.Experiences, d.ToExperienceGroups()...)
 
 	dUniq := d.UniqueSubstances()
@@ -43,7 +45,7 @@ func main() {
 	for substance, _ := range dUniq {
 		// Create companion info for Journal
 		if _, ok := jUniq[substance]; !ok {
-			companion := JournalCompanion{
+			companion := types.JournalCompanion{
 				SubstanceName: substance,
 				Color:         "CYAN",
 			}
