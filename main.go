@@ -36,15 +36,8 @@ func main() {
 		}
 	}
 
-	d := types.Doses(doses)
-	j.Experiences = append(
-		j.Experiences,
-		d.ToExperienceGroups()...,
-	)
-	j.JournalCompanions = append(
-		j.JournalCompanions,
-		d.ToJournalCompanions(j.UniqueSubstances())...,
-	)
+	// Append doses-logger doses to PsychonautWiki Journal format
+	j = j.Append(doses)
 
 	if b, err := json.MarshalIndent(j, "", "    "); err != nil {
 		panic(err)

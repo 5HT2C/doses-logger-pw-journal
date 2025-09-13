@@ -52,3 +52,18 @@ func (j Journal) UniqueSubstances() UniqueSubstances {
 
 	return m
 }
+
+func (j Journal) Append(doses []Dose) Journal {
+	d := Doses(doses)
+
+	j.Experiences = append(
+		j.Experiences,
+		d.ToExperienceGroups()...,
+	)
+	j.JournalCompanions = append(
+		j.JournalCompanions,
+		d.ToJournalCompanions(j.UniqueSubstances())...,
+	)
+
+	return j
+}
