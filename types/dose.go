@@ -188,6 +188,25 @@ func (doses Doses) UniqueSubstances() UniqueSubstances {
 	return m
 }
 
+func (doses Doses) ToJournalCompanions(jUniq UniqueSubstances) []JournalCompanion {
+	dUniq := doses.UniqueSubstances()
+	jComp := make([]JournalCompanion, 0)
+
+	for substance, _ := range dUniq {
+		// Create companion info for Journal
+		if _, ok := jUniq[substance]; !ok {
+			companion := JournalCompanion{
+				SubstanceName: substance,
+				Color:         "CYAN",
+			}
+
+			jComp = append(jComp, companion)
+		}
+	}
+
+	return jComp
+}
+
 func (d Dose) ParsedTime() (time.Time, error) {
 	timeZero := time.Unix(0, 0)
 	loc, err := time.LoadLocation(d.Timezone)

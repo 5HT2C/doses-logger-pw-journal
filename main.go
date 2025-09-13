@@ -37,22 +37,14 @@ func main() {
 	}
 
 	d := types.Doses(doses)
-	j.Experiences = append(j.Experiences, d.ToExperienceGroups()...)
-
-	dUniq := d.UniqueSubstances()
-	jUniq := j.UniqueSubstances()
-
-	for substance, _ := range dUniq {
-		// Create companion info for Journal
-		if _, ok := jUniq[substance]; !ok {
-			companion := types.JournalCompanion{
-				SubstanceName: substance,
-				Color:         "CYAN",
-			}
-
-			j.JournalCompanions = append(j.JournalCompanions, companion)
-		}
-	}
+	j.Experiences = append(
+		j.Experiences,
+		d.ToExperienceGroups()...,
+	)
+	j.JournalCompanions = append(
+		j.JournalCompanions,
+		d.ToJournalCompanions(j.UniqueSubstances())...,
+	)
 
 	if b, err := json.MarshalIndent(j, "", "    "); err != nil {
 		panic(err)
