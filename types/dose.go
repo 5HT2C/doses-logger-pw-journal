@@ -38,6 +38,7 @@ func (t *TimeData) TimeInLocation() time.Time {
 			return t.Timestamp
 		} else {
 			loc = *l
+			timeLoc[t.Timezone] = loc
 		}
 	}
 
