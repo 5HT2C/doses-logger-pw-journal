@@ -1,3 +1,5 @@
 package types
 
-type UniqueSubstances map[string]int64
+type Substance string
+
+type UniqueSubstances map[Substance]int64

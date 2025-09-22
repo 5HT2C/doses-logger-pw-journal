@@ -52,7 +52,7 @@ type Dose struct { // timezone,date,time,dosage,drug,roa,note
 	Date    string    `json:"date,omitempty"`
 	Time    string    `json:"time,omitempty"`
 	Dosage  Dosage    `json:"dosage,omitempty"`
-	Drug    string    `json:"drug,omitempty"`
+	Drug    Substance `json:"drug,omitempty"`
 	RoA     RoA       `json:"roa,omitempty"`
 	Note    string    `json:"note,omitempty"`
 }
@@ -176,7 +176,7 @@ func (doses Doses) ToExperienceGroups() []Experience {
 }
 
 func (doses Doses) UniqueSubstances() UniqueSubstances {
-	m := make(map[string]int64)
+	m := make(map[Substance]int64)
 
 	for _, d := range doses {
 		if n, ok := m[d.Drug]; !ok {

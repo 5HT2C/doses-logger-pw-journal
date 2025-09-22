@@ -11,7 +11,7 @@ type Journal struct {
 }
 
 type JournalCompanion struct {
-	SubstanceName string       `json:"substanceName"`
+	SubstanceName Substance    `json:"substanceName"`
 	Color         JournalColor `json:"color"`
 }
 
@@ -26,21 +26,21 @@ type Experience struct {
 }
 
 type Ingestion struct {
-	SubstanceName       string  `json:"substanceName"`
-	Time                *int64  `json:"time"`
-	EndTime             *int64  `json:"endTime"`
-	CreationDate        int64   `json:"creationDate"`
-	AdministrationRoute *string `json:"administrationRoute"`
-	Dose                float64 `json:"dose"`
-	IsDoseAnEstimate    bool    `json:"isDoseAnEstimate"`
-	Units               string  `json:"units"`
-	Notes               string  `json:"notes"`
+	SubstanceName       Substance `json:"substanceName"`
+	Time                *int64    `json:"time"`
+	EndTime             *int64    `json:"endTime"`
+	CreationDate        int64     `json:"creationDate"`
+	AdministrationRoute *string   `json:"administrationRoute"`
+	Dose                float64   `json:"dose"`
+	IsDoseAnEstimate    bool      `json:"isDoseAnEstimate"`
+	Units               string    `json:"units"`
+	Notes               string    `json:"notes"`
 }
 
 type JournalColor string
 
 func (j Journal) UniqueSubstances() UniqueSubstances {
-	m := make(map[string]int64)
+	m := make(map[Substance]int64)
 
 	for _, c := range j.JournalCompanions {
 		if n, ok := m[c.SubstanceName]; !ok {
