@@ -5,9 +5,11 @@ import (
 	"flag"
 	"fmt"
 	"io"
+	"log"
 	"net/http"
 	"os"
 
+	"github.com/5HT2C/doses-logger-pw-journal/gen"
 	"github.com/5HT2C/doses-logger-pw-journal/types"
 )
 
@@ -18,7 +20,18 @@ var (
 
 func main() {
 	flag.Parse()
+	generateColors()
 	generateConfig()
+}
+
+func generateColors() {
+	if err := types.InitColors(); err != nil {
+		log.Fatalf("Failed to init colors: %v", err)
+	}
+
+	if err := gen.Render(types.DefaultColors); err != nil {
+		log.Fatalf("Failed to generate color constants: %v", err)
+	}
 }
 
 func generateConfig() {
