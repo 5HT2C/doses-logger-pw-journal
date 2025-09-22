@@ -1,0 +1,38 @@
+diff --git i/gen/AdaptiveColor.kt w/gen/AdaptiveColor.kt
+--- i/gen/AdaptiveColor.kt
++++ w/gen/AdaptiveColor.kt
+@@ -18,6 +18,2 @@
+ 
+-package com.isaakhanimann.journal.data.room.experiences.entities
+-
+-import androidx.compose.ui.graphics.Color
+-
+ enum class AdaptiveColor {
+@@ -587,2 +583,25 @@ enum class AdaptiveColor {
+     abstract val isPreferred: Boolean
+-}
+\ No newline at end of file
++
++    inline fun getJSON(): String {
++        val cDark = this.getComposeColor(true)
++        val cLight = this.getComposeColor(false)
++
++        return """  "${this.name}": {
++    "dark": {"r": ${cDark.red}, "g": ${cDark.green}, "b": ${cDark.blue}},
++    "light": {"r": ${cLight.red}, "g": ${cLight.green}, "b": ${cLight.blue}},
++    "preferred": ${this.isPreferred}
++  }"""
++    }
++}
++
++class Color(
++    val red: Int,
++    val green: Int,
++    val blue: Int,
++)
++
++println(
++    AdaptiveColor.entries.joinToString(prefix = "[\n", postfix = "\n]", separator = ",\n") {
++        enumValueOf<AdaptiveColor>(it.name).getJSON()
++    },
++)
