@@ -1,6 +1,8 @@
 package gen
 
 import (
+	"maps"
+	"slices"
 	"strings"
 
 	"github.com/5HT2C/doses-logger-pw-journal/types"
@@ -21,7 +23,8 @@ var (
 
 func Render(cfg types.AdaptiveColorConfig) error {
 	genConst := make([]Code, 0)
-	for k, _ := range cfg {
+
+	for _, k := range slices.Sorted(maps.Keys(cfg)) {
 		s := string(k)
 		sFmt := "Color" + replr.Replace(caser.String(replr.Replace(s)))
 
