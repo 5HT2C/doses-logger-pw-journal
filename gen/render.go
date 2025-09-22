@@ -37,11 +37,9 @@ func Render(cfg types.AdaptiveColorConfig) error {
 For more information regarding the generation process of the const color types, refer to here:
 [pkg/github.com/5HT2C/doses-logger-pw-journal/gen.Render] and [AdaptiveColor.kt]
 
-[AdaptiveColor.kt]: https://github.com/pwarchive/psychonautwiki-journal-android/blob/73f013752cea2f05558c1ed091cdccd3dfcde62b/app/src/main/java/com/isaakhanimann/journal/data/room/experiences/entities/AdaptiveColor.kt#L587 )
+[AdaptiveColor.kt]: https://github.com/pwarchive/psychonautwiki-journal-android/blob/73f0137/app/src/main/java/com/isaakhanimann/journal/data/room/experiences/entities/AdaptiveColor.kt
 `)
 	f.Const().Defs(genConst...)
 
-	//buf := &bytes.Buffer{}
-	//err := f.Render(buf)
 	return f.Save("types/const.go")
 }
