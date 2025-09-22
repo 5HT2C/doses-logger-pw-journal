@@ -1,2 +1,6 @@
 .idea/
 *.json
+
+# For legal concerns, we will not directly include the GPL v3 sources
+!gen/AdaptiveColor.kt*
+gen/AdaptiveColor.kt*
