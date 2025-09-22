@@ -1,0 +1,257 @@
+[
+  "RED": {
+    "dark": {"r": 255, "g": 69, "b": 58},
+    "light": {"r": 255, "g": 59, "b": 48},
+    "preferred": true
+  },
+  "ORANGE": {
+    "dark": {"r": 255, "g": 159, "b": 10},
+    "light": {"r": 255, "g": 149, "b": 0},
+    "preferred": true
+  },
+  "YELLOW": {
+    "dark": {"r": 255, "g": 214, "b": 10},
+    "light": {"r": 255, "g": 204, "b": 0},
+    "preferred": true
+  },
+  "GREEN": {
+    "dark": {"r": 48, "g": 209, "b": 88},
+    "light": {"r": 52, "g": 199, "b": 89},
+    "preferred": true
+  },
+  "MINT": {
+    "dark": {"r": 102, "g": 212, "b": 207},
+    "light": {"r": 0, "g": 199, "b": 190},
+    "preferred": true
+  },
+  "TEAL": {
+    "dark": {"r": 64, "g": 200, "b": 224},
+    "light": {"r": 48, "g": 176, "b": 199},
+    "preferred": true
+  },
+  "CYAN": {
+    "dark": {"r": 100, "g": 210, "b": 255},
+    "light": {"r": 50, "g": 173, "b": 230},
+    "preferred": true
+  },
+  "BLUE": {
+    "dark": {"r": 10, "g": 132, "b": 255},
+    "light": {"r": 0, "g": 122, "b": 255},
+    "preferred": true
+  },
+  "INDIGO": {
+    "dark": {"r": 94, "g": 92, "b": 230},
+    "light": {"r": 88, "g": 86, "b": 214},
+    "preferred": true
+  },
+  "PURPLE": {
+    "dark": {"r": 191, "g": 90, "b": 242},
+    "light": {"r": 175, "g": 82, "b": 222},
+    "preferred": true
+  },
+  "PINK": {
+    "dark": {"r": 255, "g": 55, "b": 95},
+    "light": {"r": 255, "g": 45, "b": 85},
+    "preferred": true
+  },
+  "BROWN": {
+    "dark": {"r": 172, "g": 142, "b": 104},
+    "light": {"r": 162, "g": 132, "b": 94},
+    "preferred": true
+  },
+  "FIRE_ENGINE_RED": {
+    "dark": {"r": 237, "g": 43, "b": 42},
+    "light": {"r": 237, "g": 14, "b": 6},
+    "preferred": false
+  },
+  "CORAL": {
+    "dark": {"r": 255, "g": 131, "b": 121},
+    "light": {"r": 180, "g": 92, "b": 85},
+    "preferred": false
+  },
+  "TOMATO": {
+    "dark": {"r": 255, "g": 99, "b": 71},
+    "light": {"r": 180, "g": 69, "b": 50},
+    "preferred": false
+  },
+  "CINNABAR": {
+    "dark": {"r": 227, "g": 36, "b": 0},
+    "light": {"r": 227, "g": 36, "b": 0},
+    "preferred": false
+  },
+  "RUST": {
+    "dark": {"r": 199, "g": 81, "b": 58},
+    "light": {"r": 199, "g": 81, "b": 58},
+    "preferred": false
+  },
+  "ORANGE_RED": {
+    "dark": {"r": 255, "g": 69, "b": 0},
+    "light": {"r": 205, "g": 55, "b": 0},
+    "preferred": false
+  },
+  "AUBURN": {
+    "dark": {"r": 217, "g": 80, "b": 0},
+    "light": {"r": 173, "g": 62, "b": 0},
+    "preferred": false
+  },
+  "SADDLE_BROWN": {
+    "dark": {"r": 191, "g": 95, "b": 25},
+    "light": {"r": 139, "g": 69, "b": 19},
+    "preferred": false
+  },
+  "DARK_ORANGE": {
+    "dark": {"r": 255, "g": 140, "b": 0},
+    "light": {"r": 155, "g": 84, "b": 0},
+    "preferred": false
+  },
+  "DARK_GOLD": {
+    "dark": {"r": 169, "g": 104, "b": 0},
+    "light": {"r": 169, "g": 104, "b": 0},
+    "preferred": false
+  },
+  "KHAKI": {
+    "dark": {"r": 203, "g": 183, "b": 137},
+    "light": {"r": 128, "g": 114, "b": 86},
+    "preferred": false
+  },
+  "BRONZE": {
+    "dark": {"r": 167, "g": 123, "b": 0},
+    "light": {"r": 120, "g": 87, "b": 0},
+    "preferred": false
+  },
+  "GOLD": {
+    "dark": {"r": 255, "g": 215, "b": 0},
+    "light": {"r": 130, "g": 109, "b": 0},
+    "preferred": false
+  },
+  "OLIVE": {
+    "dark": {"r": 141, "g": 134, "b": 0},
+    "light": {"r": 102, "g": 97, "b": 0},
+    "preferred": false
+  },
+  "OLIVE_DRAB": {
+    "dark": {"r": 154, "g": 166, "b": 14},
+    "light": {"r": 111, "g": 118, "b": 8},
+    "preferred": false
+  },
+  "DARK_OLIVE_GREEN": {
+    "dark": {"r": 105, "g": 133, "b": 58},
+    "light": {"r": 85, "g": 107, "b": 47},
+    "preferred": false
+  },
+  "MOSS_GREEN": {
+    "dark": {"r": 102, "g": 156, "b": 53},
+    "light": {"r": 79, "g": 122, "b": 40},
+    "preferred": false
+  },
+  "LIME_GREEN": {
+    "dark": {"r": 0, "g": 255, "b": 0},
+    "light": {"r": 0, "g": 130, "b": 0},
+    "preferred": false
+  },
+  "LIME": {
+    "dark": {"r": 50, "g": 205, "b": 50},
+    "light": {"r": 32, "g": 130, "b": 32},
+    "preferred": false
+  },
+  "FOREST_GREEN": {
+    "dark": {"r": 34, "g": 139, "b": 34},
+    "light": {"r": 28, "g": 114, "b": 28},
+    "preferred": false
+  },
+  "SEA_GREEN": {
+    "dark": {"r": 46, "g": 139, "b": 87},
+    "light": {"r": 38, "g": 114, "b": 71},
+    "preferred": false
+  },
+  "JUNGLE_GREEN": {
+    "dark": {"r": 3, "g": 136, "b": 88},
+    "light": {"r": 3, "g": 136, "b": 88},
+    "preferred": false
+  },
+  "LIGHT_SEA_GREEN": {
+    "dark": {"r": 32, "g": 178, "b": 170},
+    "light": {"r": 22, "g": 128, "b": 122},
+    "preferred": false
+  },
+  "DARK_TURQUOISE": {
+    "dark": {"r": 0, "g": 206, "b": 209},
+    "light": {"r": 0, "g": 131, "b": 134},
+    "preferred": false
+  },
+  "DODGER_BLUE": {
+    "dark": {"r": 30, "g": 144, "b": 255},
+    "light": {"r": 24, "g": 116, "b": 205},
+    "preferred": false
+  },
+  "ROYAL_BLUE": {
+    "dark": {"r": 72, "g": 117, "b": 251},
+    "light": {"r": 65, "g": 105, "b": 225},
+    "preferred": false
+  },
+  "DEEP_LAVENDER": {
+    "dark": {"r": 135, "g": 78, "b": 254},
+    "light": {"r": 135, "g": 78, "b": 254},
+    "preferred": false
+  },
+  "BLUE_VIOLET": {
+    "dark": {"r": 166, "g": 73, "b": 252},
+    "light": {"r": 138, "g": 43, "b": 226},
+    "preferred": false
+  },
+  "DARK_VIOLET": {
+    "dark": {"r": 162, "g": 76, "b": 210},
+    "light": {"r": 148, "g": 0, "b": 211},
+    "preferred": false
+  },
+  "HELIOTROPE": {
+    "dark": {"r": 151, "g": 93, "b": 175},
+    "light": {"r": 151, "g": 93, "b": 175},
+    "preferred": false
+  },
+  "BYZANTIUM": {
+    "dark": {"r": 190, "g": 56, "b": 243},
+    "light": {"r": 153, "g": 41, "b": 189},
+    "preferred": false
+  },
+  "MAGENTA": {
+    "dark": {"r": 255, "g": 0, "b": 255},
+    "light": {"r": 205, "g": 0, "b": 205},
+    "preferred": false
+  },
+  "DARK_MAGENTA": {
+    "dark": {"r": 217, "g": 0, "b": 217},
+    "light": {"r": 139, "g": 0, "b": 139},
+    "preferred": false
+  },
+  "FUCHSIA": {
+    "dark": {"r": 214, "g": 68, "b": 146},
+    "light": {"r": 189, "g": 60, "b": 129},
+    "preferred": false
+  },
+  "DEEP_PINK": {
+    "dark": {"r": 255, "g": 20, "b": 147},
+    "light": {"r": 205, "g": 16, "b": 117},
+    "preferred": false
+  },
+  "GRAYISH_MAGENTA": {
+    "dark": {"r": 161, "g": 96, "b": 128},
+    "light": {"r": 161, "g": 96, "b": 128},
+    "preferred": false
+  },
+  "HOT_PINK": {
+    "dark": {"r": 255, "g": 105, "b": 180},
+    "light": {"r": 180, "g": 74, "b": 126},
+    "preferred": false
+  },
+  "JAZZBERRY_JAM": {
+    "dark": {"r": 230, "g": 59, "b": 122},
+    "light": {"r": 185, "g": 45, "b": 93},
+    "preferred": false
+  },
+  "MAROON": {
+    "dark": {"r": 187, "g": 82, "b": 99},
+    "light": {"r": 190, "g": 49, "b": 68},
+    "preferred": false
+  }
+]
