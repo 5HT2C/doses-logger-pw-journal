@@ -18,7 +18,10 @@ var (
 
 func main() {
 	flag.Parse()
+	generateConfig()
+}
 
+func generateConfig() {
 	var doses []types.Dose
 	if err := getJsonFromUrl(&doses, *loadUrl); err != nil {
 		panic(err)
