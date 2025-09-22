@@ -24,7 +24,7 @@ type AdaptiveColorConfig map[Color]AdaptiveColor
 //   - Light is the respective [ColorValue] for the app's light theme
 //   - Preferred is used in [FinishIngestionScreenViewModel.kt] to choose a random color when creating a new [JournalCompanion] for a [Substance] which does not already have its own [JournalCompanion].
 //
-// [FinishIngestionScreenViewModel.kt]: https://github.com/pwarchive/psychonautwiki-journal-android/blob/73f013752cea2f05558c1ed091cdccd3dfcde62b/app/src/main/java/com/isaakhanimann/journal/ui/tabs/journal/addingestion/time/FinishIngestionScreenViewModel.kt#L197
+// [FinishIngestionScreenViewModel.kt]: https://github.com/pwarchive/psychonautwiki-journal-android/blob/73f0137/app/src/main/java/com/isaakhanimann/journal/ui/tabs/journal/addingestion/time/FinishIngestionScreenViewModel.kt#L197
 type AdaptiveColor struct {
 	Dark      ColorValue `json:"dark"`
 	Light     ColorValue `json:"light"`
@@ -47,7 +47,7 @@ type ColorValue struct {
 // [pkg/github.com/5HT2C/doses-logger-pw-journal/gen.Render]
 //
 // [AdaptiveColor.kts]: https://github.com/5HT2C/doses-logger-pw-journal/tree/master/gen
-// [AdaptiveColor.kt]: https://github.com/pwarchive/psychonautwiki-journal-android/blob/73f013752cea2f05558c1ed091cdccd3dfcde62b/app/src/main/java/com/isaakhanimann/journal/data/room/experiences/entities/AdaptiveColor.kt#L587
+// [AdaptiveColor.kt]: https://github.com/pwarchive/psychonautwiki-journal-android/blob/73f0137/app/src/main/java/com/isaakhanimann/journal/data/room/experiences/entities/AdaptiveColor.kt
 func InitColors() error {
 	if b, err := os.ReadFile(ColorCfg); err != nil {
 		return err

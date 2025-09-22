@@ -61,8 +61,9 @@ type Doses []Dose
 
 type RoA string
 
-// ToIngestionRoA converts the RoA to Journal format
-// Docs: https://github.com/pwarchive/psychonautwiki-journal-android/blob/73f013752cea2f05558c1ed091cdccd3dfcde62b/app/src/main/java/com/isaakhanimann/journal/data/substances/AdministrationRoute.kt#L27
+// ToIngestionRoA converts the RoA to Journal format, which is adapted from [AdministrationRoute.kt].
+//
+// [AdministrationRoute.kt]: https://github.com/pwarchive/psychonautwiki-journal-android/blob/73f0137/app/src/main/java/com/isaakhanimann/journal/data/substances/AdministrationRoute.kt#L27
 func (r RoA) ToIngestionRoA() *string {
 	roa := ""
 
@@ -210,7 +211,7 @@ func (doses Doses) ToJournalCompanions(jUniq UniqueSubstances) []JournalCompanio
 
 func (d Dose) ParsedTime() (time.Time, error) {
 	timeZero := time.Unix(0, 0)
-	loc, err := time.LoadLocation(d.Timezone)
+	loc, err := time.LoadLocation(d.Timezone) // TODO: This should be cached using [timeLoc]
 	if err != nil {
 		return timeZero, err
 	}
