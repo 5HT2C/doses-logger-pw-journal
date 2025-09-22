@@ -32,7 +32,7 @@ diff --git i/gen/AdaptiveColor.kt w/gen/AdaptiveColor.kt
 +)
 +
 +println(
-+    AdaptiveColor.entries.joinToString(prefix = "[\n", postfix = "\n]", separator = ",\n") {
++    AdaptiveColor.entries.joinToString(prefix = "{\n", postfix = "\n}", separator = ",\n") {
 +        enumValueOf<AdaptiveColor>(it.name).getJSON()
 +    },
 +)
