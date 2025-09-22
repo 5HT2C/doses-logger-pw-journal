@@ -11,8 +11,8 @@ type Journal struct {
 }
 
 type JournalCompanion struct {
-	SubstanceName Substance    `json:"substanceName"`
-	Color         JournalColor `json:"color"`
+	SubstanceName Substance `json:"substanceName"`
+	Color         Color     `json:"color"`
 }
 
 type JournalCompanions []JournalCompanions
@@ -36,8 +36,6 @@ type Ingestion struct {
 	Units               string    `json:"units"`
 	Notes               string    `json:"notes"`
 }
-
-type JournalColor string
 
 func (j Journal) UniqueSubstances() UniqueSubstances {
 	m := make(map[Substance]int64)
